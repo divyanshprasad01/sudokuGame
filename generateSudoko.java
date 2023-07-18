@@ -48,7 +48,7 @@ public class generateSudoko {
         }
 
         // Returns false if given 3 x 3 block contains num.
-        boolean unUsedInBox(int rowStart, int colStart, int num)
+        boolean  unUsedInBox(int rowStart, int colStart, int num)
         {
             for (int i = 0; i<SRN; i++)
                 for (int j = 0; j<SRN; j++)

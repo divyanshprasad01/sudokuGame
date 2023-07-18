@@ -6,6 +6,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class cell extends JTextField implements MouseListener, ActionListener {
+    int row = 0, col = 0;
 
     cell(){
         this.setPreferredSize(new Dimension(10,10));
@@ -18,7 +19,7 @@ public class cell extends JTextField implements MouseListener, ActionListener {
         this.setFont(new Font("Helvetica",Font.BOLD,25));
         this.setBorder(BorderFactory.createMatteBorder(1,1,1,1,new Color(0x19376D)));
 
-        this.addActionListener(this);
+
     }
 
     @Override

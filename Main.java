@@ -4,10 +4,15 @@ import java.awt.*;
 public class Main {
 
     public static class newWindow extends JFrame{
-        RightMenuPanel rightMenuPanel = new RightMenuPanel();
-        SudokuGrid sudokuGrid = new SudokuGrid();
+
+        RightMenuPanel rightMenuPanel;
+        SudokuGrid sudokuGrid;
+
 
         newWindow(){
+            sudokuGrid = new SudokuGrid();
+            rightMenuPanel = new RightMenuPanel(sudokuGrid.problem.getSolution(),sudokuGrid.cell);
+
             this.setTitle("Sudoku");
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             this.getContentPane().setBackground(new Color(0x0B2447));
